@@ -14,4 +14,10 @@ public class LocationServiceImpl implements LocationService {
     public List<Location> getAllLocations() {
         return locationRepository.findAll();
     }
+
+    @Override
+    public Location getLocationById(Long id) {
+        return locationRepository.findById(id)
+                .orElseThrow(() -> new LocationNotFoundException("Location not found with id: " + id));
+    }
 }
