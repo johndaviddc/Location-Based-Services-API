@@ -1,5 +1,6 @@
 package dave.dev.locationservices.service;
 
+import dave.dev.locationservices.exception.LocationNotFoundException;
 import dave.dev.locationservices.model.Location;
 import dave.dev.locationservices.repository.LocationRepository;
 import org.springframework.beans.factory.annotation.Autowired;
