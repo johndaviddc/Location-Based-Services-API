@@ -21,4 +21,10 @@ public class LocationServiceImpl implements LocationService {
         return locationRepository.findById(id)
                 .orElseThrow(() -> new LocationNotFoundException("Location not found with id: " + id));
     }
+
+    @Override
+    public Location createLocation(Location location) {
+        return locationRepository.save(location);
+    }
+    
 }
