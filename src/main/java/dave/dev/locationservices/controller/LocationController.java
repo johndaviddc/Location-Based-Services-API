@@ -28,4 +28,9 @@ public class LocationController {
     public Location createLocation(@RequestBody Location location) {
         return locationService.createLocation(location);
     }
+
+    @DeleteMapping("/{id}")
+    public void deleteLocation(@PathVariable Long id) {
+        locationService.deleteLocation(id);
+    }
 }
